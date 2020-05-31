@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/84358bb04e.js" crossorigin="anonymous"></script>
+
+    <!-- Timeline Animation Scripts : A retirer si l'animation de la timeline ne foncitonnement pas -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>YourComputer.</title>
+</head>
+
+<body>
+
+    <nav id="mynavbar" class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#home"><i class="fas fa-laptop"></i> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarYourComputer"
+            aria-controls="navbarYourComputer" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- DarkMode Button -->
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+          </label>
+          <em>DarkMode</em>
+        </div>
+        
+
+        <div class="collapse navbar-collapse" id="navbarYourComputer">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#specs">Specs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#options">Options</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#resume">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="container-fluid">
+
+        <div class="img_text">
+            <div class="heading">
+                <h1>Great it is.</h1>
+                <h3>New laptop with amazing stuffs in it.</h3>
+                <a href="#" class="button button1">Plus d'infos</a>
+                <a href="#" class="button button2">Acheter</a>
+            </div>
+
+            <div class="col-xs-8 col-md-4 home-page">
+                <!-- <img src="./assets/img/ordinateur.png" alt="ordinateur"> -->
+                <div id="monCarousel" class="carousel">
+
+                    <div class="carousel-inner caroudiv" role="listbox">
+                        <div class="carousel-item active">
+                            <img src="./assets/img/ordinateur.png" alt="ordinateur">
+
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/laptop-home2.jpg" alt="portable">
+
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./assets/img/laptop-home3.jpg" alt="computer">
+
+                        </div>
+                    </div>
+
+                    <a href="#monCarousel" class="carousel-control-prev carousel-control" role="button"
+                        data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a href="#monCarousel" class="carousel-control-next carousel-control" role="button"
+                        data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- SPECS -->
+    <section id="specs" class="container">
+
+        <h2>Specs & User reviews</h2>
+        <div class="line-separation"></div>
+
+        <div class="row elements">
+            <div class="col-md-6 barres">
+                <div class="progresses">
+                    <div class="progress">
+                        <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated"
+                            role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"
+                            style="width: 90%;">
+                            <h5>RAM : 90%</h5>
+                        </div>
+                    </div>
+
+                    <div class="progress concurrence">
+                        <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                            aria-valuemax="100" style="width: 50%;">
+                            <h5>50%</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progresses">
+                    <div class="progress">
+                        <div class="progress-bar bg-primary  progress-bar-striped progress-bar-animated"
+                            role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"
+                            style="width: 98%;">
+                            <h5>Carte Graphique : 98%</h5>
+                        </div>
+                    </div>
+                    <div class="progress concurrence">
+                        <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="20" aria-valuemin="0"
+                            aria-valuemax="100" style="width: 20%;">
+                            <h5>20%</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="progresses">
+                    <div class="progress">
+                        <div class="progress-bar bg-primary  progress-bar-striped progress-bar-animated"
+                            role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"
+                            style="width: 93%;">
+                            <h5>SSD : 93%</h5>
+                        </div>
+                    </div>
+                    <div class="progress concurrence">
+                        <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="37" aria-valuemin="0"
+                            aria-valuemax="100" style="width: 37%;">
+                            <h5>37%</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mediaqueries-margin"></div>
+
+            <div class="col-md-6 barres">
+                <div class="userreviews">
+                    <ul class="review-list">
+
+                        <li>
+                            <div class="review-badge" data-anim="1"><i class="far fa-smile"></i></div>
+                            <div class="review-small-container">
+                                <div class="review-generale" data-anim="1">
+                                    <div class="review-quotes" id="quote1">
+                                        <h3><em>"Une facilité et un confort d'utilisation incroyable."</em></h3>
+                                        <h4>Jason Mart <span>- Artiste</span></h4>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="review-badge" data-anim="2"><i class="fas fa-surprise"></i></div>
+                            <div class="review-small-container-inverted">
+                                <div class="review-generale" data-anim="2">
+                                    <div class="review-quotes" id="quote2">
+                                        <h3><em>"Du jamais vu."</em></h3>
+                                        <h4>Mary Kisnci <span>- Designeuse</span></h4>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="review-badge" data-anim="3"><i class="far fa-smile-beam"></i></div>
+                            <div class="review-small-container">
+                                <div class="review-generale" data-anim="3">
+                                    <div class="review-quotes" id="quote3">
+                                        <h3><em>"Il n'y a plus de limite ou d'excuse maintenant..."</em></h3>
+                                        <h4>Alex Telsoz <span>- Musicienne</span></h4>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- OPTIONS -->
+    <section id="options">
+
+        <div class="container">
+            <div class="heading">
+                <h2>Options</h2>
+                <div class="line-separation"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="option-block blockA">
+                        <h5>Option A</h5>
+                        <div class="line-separation-white"></div>
+                        <ul>
+                            <li>
+                                <p>16GO de RAM</p>
+                            </li>
+                            <li>
+                                <p>AMD RADEON PRO 560X</p>
+                            </li>
+                            <li>
+                                <p>8GO GDDR5</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="option-block blockB">
+                        <h5>Option B</h5>
+                        <div class="line-separation-white"></div>
+                        <ul>
+                            <li>
+                                <p>64GO de RAM</p>
+                            </li>
+                            <li>
+                                <p>AMD RADEON PRO 5000M</p>
+                            </li>
+                            <li>
+                                <p><span>8GO GDDR6</span></p>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume">
+
+        <div class="container">
+            <div class="heading">
+                <h2>Resume</h2>
+                <div class="line-separation"></div>
+            </div>
+
+
+            <div class="resume-images ">
+                <div class="resume-image ecran">
+                    <img src="./assets/img/retina.jpg" alt="retina">
+                    <div class="text-app">
+                        <p class="para-text" id="text-ecran"><span>Ecran</span> : <br /> Retina LED 500 nits,
+                            technologie IPS.</p>
+                    </div>
+                </div>
+                <div class="resume-image processeur">
+                    <img src="./assets/img/artificial.jpg" alt="clavier">
+                    <div class="text-app">
+                        <p class="para-text" id="text-memoire"><span>Mémoire</span> : <br /> 8GO ou 16GO de RAM,
+                            compatible 16GO ou 32GO.</p>
+                    </div>
+                </div>
+                <div class="resume-image ram">
+                    <img src="./assets/img/circuits.jpg" alt="circuits">
+                    <div class="text-app">
+                        <p class="para-text" id="text-processeur"><span>Processeur</span> : <br />Intel Core i5
+                            quadricoeur à 1,4 GHz ou 2GHz.</p>
+
+                    </div>
+                </div>
+                <div class="resume-image stock">
+                    <img src="./assets/img/person.jpg" alt="interieur">
+                    <div class="text-app">
+                        <p class="para-text" id="text-stockage"><span>Stockage</span> : <br />512GO ou 1TO SSD.</p>
+
+                    </div>
+                </div>
+                <div class="resume-image graphique">
+                    <img src="./assets/img/laptop.png" alt="laptop">
+                    <div class="text-app">
+                        <p class="para-text" id="text-graphique"><span>Processeur<br /> Graphique</span> : <br />Intel
+                            Ins Plus Graphics.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+
+            <div class="heading">
+                <h2>Contact</h2>
+                <div class="line-separation"></div>
+            </div>
+
+            <div class="trois-contacts">
+                <div class="co livraison">
+                    <i class="fas fa-truck"></i>
+                    <h4>Livraison dès 50€ d'achat</h4>
+                    <p>La livraison vous est offerte partout en France Métropolitaine à partir de 50€ d'achat !</p>
+                </div>
+                <div class="co sans-frais">
+                    <i class="fas fa-credit-card"></i>
+                    <h4>Paiement 3x sans frais</h4>
+                    <p>Pas de stress, vous pouvez étaler votre paiement en trois fois sans frais !</p>
+                </div>
+                <div class="co question">
+                    <i class="far fa-envelope"></i>
+                    <h4>Une question ?</h4>
+                    <p>Une question, une suggestion, besoin de nous contacter ? N'attendez pas !</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="fleche">
+            <a href="#home">
+                <i class="fas fa-sort-up"></i>
+            </a>
+        </div>
+
+        <div class="line-separation"></div>
+        <div class='mentions-légales'>
+            <p>Copyright © 2020 Demo site designed & created by Shay Reichert - All rights reserved</p>
+            <p><a href="#">Politique de confidentialité</a> | <a href="#">Conditions d'utilisation</a> | <a href="#">
+                    Mentions Légales</a></p>
+        </div>
+    </footer>
+
+
+
+    <script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+
+</html>
