@@ -1,27 +1,9 @@
 @charset "UTF-8";
-/************************************************************
-Fichier : style.scss
-Theme name :
-Description: 
-Author: Shay Reichert
-Version: 1.0
-Tags:
-**************************************************************
-
-Table of Contents:
-
-0. Import (fonts, sass...)
-1. BODY
-2. HEADER
-3. SPECS + USER REVIEWS
-4. OPTIONS
-5. RESUME
-6. CONTACT
-7. FOOTER
-
-**************************************************************/
 /************************************************
-0.1	Import
+2	MIXIN
+************************************************/
+/************************************************
+3. COLORS
 ************************************************/
 @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
@@ -31,26 +13,30 @@ Table of Contents:
   --color-secondary: #f5f5f5;
   --color-shadows: #00000080;
   --darkgrey: #f5f5f5;
-  --color-main-titles: #3d3d3d; }
+  --color-main-titles: #3d3d3d;
+  --color-background-menu: #141414b4;
+  --color-text-menu: #ecececb4; }
 
 /************************************************
-0.2	DarkMode
+DarkMode
 ************************************************/
 .darkmode {
   --color-page-background: #141414;
   --color-text: #fff;
   --color-secondary: #00000080;
   --color-shadows: #f5f5f5;
-  --darkgrey: #141414;
-  --color-main-titles: #f5f5f5; }
+  --darkgrey: #000;
+  --color-main-titles: #f5f5f5;
+  --color-background-menu: #ecececb4;
+  --color-text-menu: #141414b4; }
 
 /************************************************
-1.a	BODY
+1  BODY
 ************************************************/
 body {
-  font-family: "Questrial", sans-serif;
-  background-color: var(--color-page-background);
-  color: var(--color-text); }
+  font-family: "Questrial", sans-serif !important;
+  background-color: var(--color-page-background) !important;
+  color: var(--color-text) !important; }
 
 img {
   max-width: 100%;
@@ -64,31 +50,55 @@ li {
   background-color: #20618d;
   margin: 0 auto; }
 
+/************************************************************
+Table of Contents:
+
+0. Import (fonts, sass...)
+1. BODY..........base.scss
+2. MIXIN.........utils.scss
+3. COLORS........utils.scss
+5.
+3. SPECS + USER REVIEWS
+4. OPTIONS
+5. RESUME
+6. CONTACT
+7. FOOTER
+
+**************************************************************/
+/************************************************
+0.1	Import
+************************************************/
 /************************************************
 1.b	MENU
 ************************************************/
 #mynavbar {
-  background-color: #141414b4 !important;
-  color: white !important; }
+  background-color: var(--color-background-menu) !important;
+  color: var(--color-text-menu) !important; }
   #mynavbar i {
-    color: white !important;
+    color: var(--color-text-menu) !important;
     font-size: 30px; }
 
 #navbarYourComputer ul li a {
-  color: white; }
+  color: var(--color-text-menu); }
+  #navbarYourComputer ul li a:hover {
+    color: var(--color-page-background); }
 #navbarYourComputer form button {
-  color: white; }
+  color: var(--color-text-menu); }
+  #navbarYourComputer form button:hover {
+    color: var(--color-page-background); }
 
 /************************************************
 2.	HEADER
 ************************************************/
 #home {
-  background-color: var(--color-page-background);
-  font-family: "Questrial", sans-serif;
+  flex-direction: column;
+  align-items: center;
   display: flex;
+  font-family: "Questrial", sans-serif;
+  min-height: 100vh;
   justify-content: space-around;
   flex-wrap: wrap;
-  min-height: 100vh; }
+  background-color: var(--color-page-background); }
 
 .img_text {
   margin: 90px auto 30px auto;
@@ -173,18 +183,18 @@ li {
 3.	SPECS + USER REVIEWS
 ************************************************/
 #specs {
-  display: flex;
   flex-direction: column;
   align-items: center;
+  display: flex;
   font-family: "Questrial", sans-serif;
   min-height: 100vh;
-  background: var(--darkgrey); }
+  background-color: var(--darkgrey); }
   #specs h2 {
-    color: var(--color-text);
-    text-align: center;
-    padding: 10px;
     margin-top: 100px;
-    margin-bottom: 10px; }
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--color-text); }
   #specs .line-separation {
     width: 200px;
     margin-bottom: 80px; }
@@ -221,6 +231,7 @@ li {
   transform: translateY(0px); }
 
 .userreviews {
+  background-color: var(--color-page-background);
   margin: 30px auto;
   display: block;
   width: 90%;
@@ -321,11 +332,11 @@ li {
     margin: 0 auto;
     text-align: center; }
   #options h2 {
-    margin-top: 100px;
     color: var(--color-text);
-    text-align: center;
+    margin-top: 100px;
     padding: 10px;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    text-align: center; }
   #options .line-separation {
     margin-bottom: 80px;
     width: 200px; }
@@ -369,13 +380,13 @@ li {
 5.	RESUME
 ************************************************/
 #resume {
-  display: flex;
   flex-direction: column;
   align-items: center;
+  display: flex;
   font-family: "Questrial", sans-serif;
   min-height: 100vh; }
   #resume .container {
-    background: var(--color-secondary);
+    background: var(--darkgrey);
     margin: auto; }
   #resume .heading {
     margin: 0 auto;
@@ -384,10 +395,10 @@ li {
     margin-bottom: 80px;
     width: 200px; }
   #resume h2 {
-    text-align: center;
-    padding: 10px;
     margin-top: 100px;
-    margin-bottom: 10px; }
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center; }
 
 .resume-images {
   box-shadow: 1px 1px 6px var(--color-shadows);
@@ -427,7 +438,7 @@ li {
     transition: 200ms;
     text-align: center;
     margin: auto;
-    color: var(--color-secondary);
+    color: #fff;
     background-color: rgba(20, 20, 20, 0.5);
     padding: 20px 0;
     max-width: 100%;
@@ -447,11 +458,11 @@ li {
 6.	CONTACT
 ************************************************/
 #contact {
-  display: flex;
   flex-direction: column;
   align-items: center;
+  display: flex;
   font-family: "Questrial", sans-serif;
-  min-height: 50vh; }
+  min-height: 100vh; }
   #contact .container {
     margin: auto;
     margin-bottom: 100px; }
@@ -462,10 +473,10 @@ li {
     margin-bottom: 80px;
     width: 200px; }
   #contact h2 {
-    text-align: center;
-    padding: 10px;
     margin-top: 100px;
-    margin-bottom: 10px; }
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center; }
 
 .trois-contacts {
   display: flex;
@@ -522,46 +533,49 @@ footer .fleche {
     font-size: 20px; }
 
 /************************************************
-Refaire tout le SCSS en fichiers séparé avec mixin et tout
+TOGGLE (fichier sep)
 ************************************************/
 .theme-switch-wrapper {
+  margin-left: 60px;
   display: flex;
   align-items: center; }
-  .theme-switch-wrapper em {
+  .theme-switch-wrapper i {
     margin-left: 10px;
-    font-size: 1rem; }
+    margin-right: 50px;
+    font-size: 0.5em; }
 
 .theme-switch {
+  margin: auto;
   display: inline-block;
-  height: 34px;
+  height: 18px;
   position: relative;
-  width: 60px; }
+  width: 50px; }
 
 .theme-switch input {
   display: none; }
 
 .slider {
-  background-color: #ccc;
-  bottom: 0;
+  background-color: var(--color-background-menu);
+  bottom: 0px;
   cursor: pointer;
-  left: 0;
+  left: 0px;
   position: absolute;
   right: 0;
-  top: 0;
-  transition: .4s; }
+  top: 0px;
+  transition: 0.4s; }
 
 .slider:before {
-  background-color: #fff;
-  bottom: 4px;
+  background-color: var(--color-text-menu);
+  bottom: 1px;
   content: "";
-  height: 26px;
-  left: 4px;
+  height: 16px;
+  left: 5px;
   position: absolute;
-  transition: .4s;
-  width: 26px; }
+  transition: 0.4s;
+  width: 16px; }
 
 input:checked + .slider {
-  background-color: #66bb6a; }
+  background-color: var(--color-background-menu); }
 
 input:checked + .slider:before {
   transform: translateX(26px); }

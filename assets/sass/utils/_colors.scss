@@ -1,0 +1,37 @@
+/************************************************
+3. COLORS
+************************************************/
+$clr-light: #fff;
+$clr-dark: #141414;
+$clr-primary: #20618d;
+$clr-secondary: #f5f5f5;
+$clr-shadows: #00000080;
+$clr-main-titles: #3d3d3d;
+$clr-background-menu: #141414b4;
+
+//CSS Variables
+:root {
+    --color-page-background: #{$clr-light};
+    --color-text: #{$clr-dark};
+    --color-secondary: #{$clr-secondary};
+    --color-shadows: #{$clr-shadows};
+    --darkgrey: #{$clr-secondary};
+    --color-main-titles: #{$clr-main-titles};
+    --color-background-menu: #{$clr-background-menu};
+    --color-text-menu: #ecececb4;
+}
+
+/************************************************
+DarkMode
+************************************************/
+//Addclass
+.darkmode {
+    --color-page-background: #{$clr-dark};
+    --color-text: #{$clr-light};
+    --color-secondary: #{$clr-shadows};
+    --color-shadows: #{$clr-secondary};
+    --darkgrey: #000;
+    --color-main-titles: #{$clr-secondary};
+    --color-background-menu: #ecececb4;
+    --color-text-menu: #{$clr-background-menu};
+}
