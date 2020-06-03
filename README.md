@@ -1,7 +1,7 @@
 # YourComputer (demo site)
 
 ***Click on the image to access :***
-[![DemoSite](https://github.com/ShayReichert/demo_site/blob/master/site_demo_screen.png)](#)
+[![DemoSite](https://github.com/ShayReichert/demo_site/blob/master/site_demo_screen.png)](https://shayreichert.github.io/demo_site/)
 
 ---
 ## Skills Required to make this site
