@@ -1,4 +1,22 @@
 @charset "UTF-8";
+/************************************************************
+Table of Contents:
+
+0. FONTS.........vendors
+1. BODY..........base
+2. MIXIN.........utils
+3. COLORS........utils
+5. NAVBAR........layout
+6. FOOTER........layout
+7. BUTTONS.......components
+
+8.  PAGE : HOME....................pages
+9.  PAGE : SPECS + USER REVIEWS....pages
+10. PAGE :	OPTIONS................pages
+11. PAGE :	RESUME.................pages
+12. PAGE :	CONTACT................pages
+
+**************************************************************/
 /************************************************
 2	MIXIN
 ************************************************/
@@ -31,6 +49,9 @@ DarkMode
   --color-text-menu: #141414b4; }
 
 /************************************************
+0  FONTS
+************************************************/
+/************************************************
 1  BODY
 ************************************************/
 body {
@@ -50,26 +71,30 @@ li {
   background-color: #20618d;
   margin: 0 auto; }
 
-/************************************************************
-Table of Contents:
+.heading .button {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-size: 17px;
+  color: #20618d;
+  border-radius: 20px;
+  transition: 200ms ease; }
+.heading .button1 {
+  margin-left: 80px;
+  border: 2px solid #20618d;
+  padding: 8px 15px; }
+  .heading .button1:hover {
+    opacity: 0.8; }
+.heading .button2 {
+  margin-left: 30px;
+  background: #20618d;
+  color: white;
+  padding: 8px 15px;
+  border: 2px solid #20618d; }
+  .heading .button2:hover {
+    background: #0067ad; }
 
-0. Import (fonts, sass...)
-1. BODY..........base.scss
-2. MIXIN.........utils.scss
-3. COLORS........utils.scss
-5.
-3. SPECS + USER REVIEWS
-4. OPTIONS
-5. RESUME
-6. CONTACT
-7. FOOTER
-
-**************************************************************/
 /************************************************
-0.1	Import
-************************************************/
-/************************************************
-1.b	MENU
+1	NAVBAR
 ************************************************/
 #mynavbar {
   background-color: var(--color-background-menu) !important;
@@ -78,17 +103,116 @@ Table of Contents:
     color: var(--color-text-menu) !important;
     font-size: 30px; }
 
-#navbarYourComputer ul li a {
-  color: var(--color-text-menu); }
-  #navbarYourComputer ul li a:hover {
-    color: var(--color-page-background); }
 #navbarYourComputer form button {
   color: var(--color-text-menu); }
   #navbarYourComputer form button:hover {
     color: var(--color-page-background); }
 
+.navbar {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 18px;
+  text-align: center; }
+  .navbar .collapse {
+    text-align: center; }
+  .navbar li a {
+    color: var(--color-text-menu) !important;
+    margin: auto 10px; }
+
+.nav-link:hover {
+  color: var(--color-page-background) !important; }
+.nav-link.active {
+  color: var(--color-page-background) !important; }
+
+.navbar-toggler:focus {
+  outline: none; }
+
 /************************************************
-2.	HEADER
+DARKMODE TOGGLE (btn + ico)
+************************************************/
+.theme-switch-wrapper {
+  margin-left: 60px;
+  display: flex;
+  align-items: center; }
+  .theme-switch-wrapper i {
+    margin-left: 10px;
+    margin-right: 50px;
+    font-size: 0.5em; }
+
+.theme-switch {
+  margin: auto;
+  display: inline-block;
+  height: 18px;
+  position: relative;
+  width: 50px; }
+
+.theme-switch input {
+  display: none; }
+
+.slider {
+  background-color: var(--color-background-menu);
+  bottom: 0px;
+  cursor: pointer;
+  left: 0px;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  transition: 0.4s; }
+
+.slider:before {
+  background-color: var(--color-text-menu);
+  bottom: 1px;
+  content: "";
+  height: 16px;
+  left: 5px;
+  position: absolute;
+  transition: 0.4s;
+  width: 16px; }
+
+input:checked + .slider {
+  background-color: var(--color-background-menu); }
+
+input:checked + .slider:before {
+  transform: translateX(26px); }
+
+.slider.round {
+  border-radius: 34px; }
+
+.slider.round:before {
+  border-radius: 50%; }
+
+/************************************************
+7.	FOOTER
+************************************************/
+.mentions-légales {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #949494; }
+  .mentions-légales a {
+    color: #616161; }
+    .mentions-légales a:hover {
+      color: #2e2e2e; }
+
+footer .line-separation {
+  color: #949494;
+  height: 1px;
+  width: 80%;
+  margin: 10px auto 20px auto; }
+footer .fleche {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto; }
+  footer .fleche i {
+    color: var(--color-text);
+    font-size: 20px; }
+
+/************************************************
+8.	PAGE : HOME
 ************************************************/
 #home {
   flex-direction: column;
@@ -125,27 +249,6 @@ Table of Contents:
     color: var(--color-main-titles);
     text-align: center;
     margin-bottom: 30px; }
-  .heading .button {
-    font-family: "Montserrat", sans-serif;
-    text-decoration: none;
-    font-size: 17px;
-    color: #20618d;
-    border-radius: 20px;
-    transition: 200ms ease; }
-  .heading .button1 {
-    margin-left: 80px;
-    border: 2px solid #20618d;
-    padding: 8px 15px; }
-    .heading .button1:hover {
-      opacity: 0.8; }
-  .heading .button2 {
-    margin-left: 30px;
-    background: #20618d;
-    color: white;
-    padding: 8px 15px;
-    border: 2px solid #20618d; }
-    .heading .button2:hover {
-      background: #0067ad; }
 
 .carousel {
   position: relative; }
@@ -180,7 +283,7 @@ Table of Contents:
     opacity: 1;
     transforme: transalteY(0px); } }
 /************************************************
-3.	SPECS + USER REVIEWS
+9.	PAGE :	SPECS + USER REVIEWS
 ************************************************/
 #specs {
   flex-direction: column;
@@ -316,7 +419,7 @@ Table of Contents:
     border-bottom: 14px solid transparent; }
 
 /************************************************
-4.	OPTIONS
+10.	PAGE :	OPTIONS
 ************************************************/
 #options {
   background-color: var(--color-page-background);
@@ -377,7 +480,7 @@ Table of Contents:
   background: url(../img/laptopcolor.png) round; }
 
 /************************************************
-5.	RESUME
+11.	PAGE :	RESUME
 ************************************************/
 #resume {
   flex-direction: column;
@@ -455,7 +558,7 @@ Table of Contents:
       font-size: 3.2vmin; }
 
 /************************************************
-6.	CONTACT
+12.	PAGE :	CONTACT
 ************************************************/
 #contact {
   flex-direction: column;
@@ -486,6 +589,7 @@ Table of Contents:
   .trois-contacts .co {
     cursor: pointer;
     margin: 10px auto;
+    margin-bottom: 150px;
     padding: 20px 10px;
     text-align: center;
     box-shadow: 1px 1px 6px #20618d;
@@ -501,89 +605,5 @@ Table of Contents:
     margin-bottom: 10px; }
   .trois-contacts i {
     font-size: 30px; }
-
-/************************************************
-7.	FOOTER
-************************************************/
-.mentions-légales {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: 12px;
-  color: #949494; }
-  .mentions-légales a {
-    color: #616161; }
-    .mentions-légales a:hover {
-      color: #2e2e2e; }
-
-footer .line-separation {
-  color: #949494;
-  height: 1px;
-  width: 80%;
-  margin: 10px auto 20px auto; }
-footer .fleche {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: auto; }
-  footer .fleche i {
-    color: var(--color-text);
-    font-size: 20px; }
-
-/************************************************
-TOGGLE (fichier sep)
-************************************************/
-.theme-switch-wrapper {
-  margin-left: 60px;
-  display: flex;
-  align-items: center; }
-  .theme-switch-wrapper i {
-    margin-left: 10px;
-    margin-right: 50px;
-    font-size: 0.5em; }
-
-.theme-switch {
-  margin: auto;
-  display: inline-block;
-  height: 18px;
-  position: relative;
-  width: 50px; }
-
-.theme-switch input {
-  display: none; }
-
-.slider {
-  background-color: var(--color-background-menu);
-  bottom: 0px;
-  cursor: pointer;
-  left: 0px;
-  position: absolute;
-  right: 0;
-  top: 0px;
-  transition: 0.4s; }
-
-.slider:before {
-  background-color: var(--color-text-menu);
-  bottom: 1px;
-  content: "";
-  height: 16px;
-  left: 5px;
-  position: absolute;
-  transition: 0.4s;
-  width: 16px; }
-
-input:checked + .slider {
-  background-color: var(--color-background-menu); }
-
-input:checked + .slider:before {
-  transform: translateX(26px); }
-
-.slider.round {
-  border-radius: 34px; }
-
-.slider.round:before {
-  border-radius: 50%; }
 
 /*# sourceMappingURL=style.css.map */

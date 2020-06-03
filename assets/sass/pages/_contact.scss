@@ -1,0 +1,51 @@
+/************************************************
+12.	PAGE :	CONTACT
+************************************************/
+#contact {
+    @include section(100vh);
+
+    .container {
+        margin: auto;
+        margin-bottom: 100px;
+    }
+    .heading {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .line-separation {
+        margin-bottom: 80px;
+        width: 200px;
+    }
+    h2 {
+        @include titresh2();
+    }
+}
+.trois-contacts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    .co {
+        cursor: pointer;
+        margin: 10px auto;
+        margin-bottom: 150px;
+        padding: 20px 10px;
+        text-align: center;
+        box-shadow: 1px 1px 6px $clr-primary;
+        border-radius: 10px;
+        width: 300px;
+        transition: 200ms;
+        &:hover {
+            transform: scale(0.99);
+            box-shadow: 0px 0px 6px $clr-primary;
+        }
+    }
+    h4 {
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    i {
+        font-size: 30px;
+    }
+}

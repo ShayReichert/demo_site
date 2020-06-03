@@ -1,0 +1,111 @@
+/************************************************
+1	NAVBAR
+************************************************/
+#mynavbar {
+    background-color: var(--color-background-menu) !important;
+    color: var(--color-text-menu) !important;
+    i {
+        color: var(--color-text-menu) !important;
+        font-size: 30px;
+    }
+}
+#navbarYourComputer {
+    form button {
+        color: var(--color-text-menu);
+        &:hover {
+            color: var(--color-page-background);
+        }
+    }
+}
+.navbar {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 18px;
+    text-align: center;
+
+    .collapse {
+        text-align: center;
+    }
+
+    li a {
+        color: var(--color-text-menu) !important;
+        margin: auto 10px;
+    }
+}
+.nav-link {
+        &:hover {
+            color: var(--color-page-background) !important;
+        }
+        &.active {
+            color: var(--color-page-background) !important;
+        }
+}
+.navbar-toggler {
+    &:focus {
+        outline: none;
+    }
+}
+
+/************************************************
+DARKMODE TOGGLE (btn + ico)
+************************************************/
+.theme-switch-wrapper {
+    margin-left: 60px;
+    display: flex;
+    align-items: center;
+
+    i {
+        margin-left: 10px;
+        margin-right: 50px;
+        font-size: 0.5em;
+    }
+}
+.theme-switch {
+    margin: auto;
+    display: inline-block;
+    height: 18px;
+    position: relative;
+    width: 50px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: var(--color-background-menu);
+    bottom: 0px;
+    cursor: pointer;
+    left: 0px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    background-color: var(--color-text-menu);
+    bottom: 1px;
+    content: "";
+    height: 16px;
+    left: 5px;
+    position: absolute;
+    transition: 0.4s;
+    width: 16px;
+}
+
+input:checked + .slider {
+    background-color: var(--color-background-menu);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

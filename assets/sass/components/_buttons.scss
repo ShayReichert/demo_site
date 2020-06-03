@@ -1,0 +1,28 @@
+.heading {
+    .button {
+        font-family: "Montserrat", sans-serif;
+        text-decoration: none;
+        font-size: 17px;
+        color: $clr-primary;
+        border-radius: 20px;
+        transition: 200ms ease;
+    }
+    .button1 {
+        margin-left: 80px;
+        border: 2px solid $clr-primary;
+        padding: 8px 15px;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    .button2 {
+        margin-left: 30px;
+        background: $clr-primary;
+        color: white;
+        padding: 8px 15px;
+        border: 2px solid $clr-primary;
+        &:hover {
+            background: saturate($clr-primary, 100%);
+        }
+    }
+}

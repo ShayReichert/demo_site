@@ -1,4 +1,17 @@
-//Progresses Barres animation
+//Smooth Scroll Menu
+$(function() {
+    $('.navbar a, footer a ').on('click', function(event) {
+        event.preventDefault();
+        let hash = this.hash;
+        $('body, html').animate({scrollTop: $(hash).offset().top}, 900, 
+        function() {
+            window.location.hash = hash;
+        })
+    })
+})
+
+
+//Progresses Barres Animation
 function scrollAppear() {
     var progressesBarres = document.querySelector('.progresses');
     var secondBarre = document.querySelector('.progresses:nth-child(2)');

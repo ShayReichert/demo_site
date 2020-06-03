@@ -1,21 +1,37 @@
-//EXEMPLE :
+/************************************************************
+Table of Contents:
 
-// @import "./utils/variables";
-// @import "./utils/functions";
-// @import "./utils/mixins";
-// @import "./utils/extensions";
+0. FONTS.........vendors
+1. BODY..........base
+2. MIXIN.........utils
+3. COLORS........utils
+5. NAVBAR........layout
+6. FOOTER........layout
+7. BUTTONS.......components
 
-// @import "./base/base";
-// @import "./base/typography";
+8.  PAGE : HOME....................pages
+9.  PAGE : SPECS + USER REVIEWS....pages
+10. PAGE :	OPTIONS................pages
+11. PAGE :	RESUME.................pages
+12. PAGE :	CONTACT................pages
 
-// @import "./components/buttons";
+**************************************************************/
 
-// @import "./layout/header";
-// @import "./layout/nav";
-// @import "./layout/container";
-// @import "./layout/form";
+@import "../sass/utils/mixin";
+@import "../sass/utils/colors";
 
+@import "../sass/vendors/fonts";
 
-// @import "./pages/work";
-// @import "./pages/about";
-// @import "./pages/project";
+@import "../sass/base/base";
+
+@import "../sass/components/buttons";
+
+@import "../sass/layout/nav";
+@import "../sass/layout/footer";
+
+@import "../sass/pages/home";
+@import "../sass/pages/specs";
+@import "../sass/pages/options";
+@import "../sass/pages/resume";
+@import "../sass/pages/contact";
+

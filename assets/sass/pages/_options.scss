@@ -1,0 +1,70 @@
+/************************************************
+10.	PAGE :	OPTIONS
+************************************************/
+#options {
+    background-color: var(--color-page-background);
+    color: $clr-light; //pas de nightmode
+    min-height: 50vh;
+
+    font-family: "Questrial", sans-serif;
+    .container {
+        background: var(--color-page-background);
+        margin: auto;
+        border: 1px solid var(--color-page-background);
+        margin-bottom: 100px;
+    }
+    .heading {
+        margin: 0 auto;
+        text-align: center;
+    }
+    h2 {
+        color: var(--color-text);
+        @include titresh2();
+
+    }
+    .line-separation {
+        margin-bottom: 80px;
+        width: 200px;
+    }
+    h5 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .line-separation-white {
+        text-align: center;
+        background-color: $clr-light; //pas de nightmode
+        height: 1px;
+        margin: 0 auto 20px auto;
+    }
+    p span {
+        background-color: black;
+    }
+}
+.option-block {
+    cursor: pointer;
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 10px;
+    opacity: 0.9;
+    box-shadow: 1px 1px 6px var(--color-shadows);
+    transition: 200ms;
+    ul li {
+        font-size: 20px;
+        text-align: left;
+        list-style: circle;
+    }
+    &:hover {
+        opacity: 1;
+        transform: scale(1.01);
+        box-shadow: 1px 1px 8px var(--color-shadows);
+    }
+}
+
+.blockA {
+    background: url(../img/ram.jpg) round;
+}
+.blockB {
+    background: url(../img/laptopcolor.png) round;
+}

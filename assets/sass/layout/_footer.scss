@@ -1,0 +1,36 @@
+/************************************************
+7.	FOOTER
+************************************************/
+.mentions-légales {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: lighten($clr-dark, 50);
+    a {
+        color: lighten($clr-dark, 30);
+        &:hover {
+            color: lighten($clr-dark, 10);
+        }
+    }
+}
+footer {
+    .line-separation {
+        color: lighten($clr-dark, 50);
+        height: 1px;
+        width: 80%;
+        margin: 10px auto 20px auto;
+    }
+    .fleche {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        i {
+            color: var(--color-text);
+            font-size: 20px;
+        }
+    }
+}

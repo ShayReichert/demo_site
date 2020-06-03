@@ -1,0 +1,83 @@
+/************************************************
+11.	PAGE :	RESUME
+************************************************/
+#resume {
+    @include section();
+
+    .container {
+        background: var(--darkgrey);
+        margin: auto;
+    }
+    .heading {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .line-separation {
+        margin-bottom: 80px;
+        width: 200px;
+    }
+    h2 {
+        @include titresh2();
+    }
+}
+
+.resume-images {
+    box-shadow: 1px 1px 6px var(--color-shadows);
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 100px;
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.resume-image {
+    position: relative;
+    cursor: help;
+    margin: auto;
+    filter: saturate(0%);
+    transition: 200ms;
+    &:hover {
+        z-index: 2;
+        filter: saturate(100%);
+        transform: scale(1.05);
+        box-shadow: 1px 1px 6px var(--color-shadows);
+    }
+    .text-app {
+        z-index: 3;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        height: 100%;
+        &:hover > .para-text {
+            opacity: 1;
+        }
+    }
+    .para-text {
+        opacity: 0;
+        transition: 200ms;
+        text-align: center;
+        margin: auto;
+        color: $clr-light;
+        background-color: fade-out($clr-dark, 0.5);
+        padding: 20px 0;
+        max-width: 100%;
+        font-size: 3vmin;
+        word-wrap: break-word;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        transition: 350ms;
+
+        span {
+            font-weight: bold;
+            color: white;
+            font-size: 3.2vmin;
+        }
+    }
+}
