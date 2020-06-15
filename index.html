@@ -3,19 +3,11 @@
 
 <head>
     <link rel="icon" type="image/png" href="assets/img/favicon.ico" />
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/84358bb04e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Timeline Animation Scripts : A retirer si l'animation de la timeline ne foncitonnement pas -->
+    <!-- Timeline Animation Scripts -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
@@ -60,7 +52,10 @@
                     <a class="nav-link" href="#resume">Resume</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
+                    <a class="nav-link" href="#contact">Infos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#formulaire-contact">Contact</a>
                 </li>
 
             </ul>
@@ -334,12 +329,12 @@
 
     </section>
 
-    <!-- CONTACT -->
+    <!-- INFOS & CONTACT -->
     <section id="contact">
         <div class="container">
 
             <div class="heading">
-                <h2>Contact</h2>
+                <h2>Infos</h2>
                 <div class="line-separation"></div>
             </div>
 
@@ -357,10 +352,64 @@
                 <div class="co question">
                     <i class="far fa-envelope"></i>
                     <h4>Une question ?</h4>
-                    <p>Une question, une suggestion, besoin de nous contacter ? N'attendez pas !</p>
+                    <a class="stretched-link" href="#formulaire-contact">
+                        <p>Une question, une suggestion, besoin de nous contacter ? N'attendez pas !</p>
+                    </a>
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <section id="formulaire-contact">
+        <div class="container">
+            <div class="contact-heading">
+                <h2>Contact</h2>
+            </div>
+            <div class="line-separation"></div>
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 mx-auto">
+                    <form id="contact-form" action="" method="post" role="form">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="firstname">Votre Prénom <span class="blue">*</span></label>
+                                <input type="text" name="firstname" id="firstname" class="form-control"
+                                    placeholder="Prénom">
+                                <p class="comments"></p>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="name">Votre Nom <span class="blue">*</span></label>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Nom">
+                                <p class="comments"></p>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email">Votre E-mail <span class="blue">*</span></label>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="E-mail">
+                                <p class="comments"></p>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="telephone">Téléphone</label>
+                                <input type="tel" name="telephone" id="telephone" class="form-control"
+                                    placeholder="Numéro de téléphone">
+                                <p class="comments"></p>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="message">Message <span class="blue">*</span></label>
+                                <textarea id="message" name="message" class="form-control" placeholder="Votre Message"
+                                    rows="4"></textarea>
+                                <p class="comments"></p>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="blue"><strong>* Ces informations sont requises</strong></p>
+                            </div>
+                            <div class="text-center col-md-12">
+                                <input type="submit" class="button button2" value="Envoyer">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -369,7 +418,9 @@
         <div class="fleche">
             <a href="#home">
                 <i class="fas fa-sort-up"></i>
+                <p>retour haut de page</p>
             </a>
+           
         </div>
 
         <div class="line-separation"></div>
@@ -380,9 +431,19 @@
         </div>
     </footer>
 
-
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/84358bb04e.js" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
 </body>
 
 </html>

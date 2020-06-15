@@ -48,4 +48,68 @@
     i {
         font-size: 30px;
     }
+    .question a {
+        color: var(--color-text);
+        text-decoration: none;
+    }
+}
+
+/************************************************
+13.	FORMULAIRE
+************************************************/
+#formulaire-contact {
+    @include section(100vh);
+    background: var(--darkgrey);
+}
+.container {
+    margin: auto;
+    margin-bottom: 100px;
+}
+.line-separation {
+    margin-bottom: 80px;
+    width: 200px;
+}
+
+.contact-heading {
+    text-align: center;
+    h2 {
+        @include titresh2();
+    }
+}
+
+#contact-form {
+    color: var(--color-text);
+    font-size: 20px;
+    background-color: var(--color-page-background);
+    padding: 40px;
+    border-radius: 5px;
+}
+
+/************************************************
+3.	ELEMENTS DU FORMULAIRE
+************************************************/
+.blue {
+    color: $clr-primary;
+}
+.form-control {
+    height: 50px;
+    font-size: 18px;
+}
+.comments {
+    color: #b91f1f;
+    font-style: italic;
+    font-size: 18px;
+    height: 25px; /*permet de lui donner une place fixe, même si msg d'erreur non affiché*/
+}
+#contact-form {
+    .button2 {
+        margin-top : 40px;
+        outline: none;
+    }
+}
+.thank-you {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 22px;
 }

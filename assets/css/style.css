@@ -71,26 +71,26 @@ li {
   background-color: #20618d;
   margin: 0 auto; }
 
-.heading .button {
+.heading .button, #formulaire-contact .button {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   font-size: 17px;
   color: #20618d;
   border-radius: 20px;
   transition: 200ms ease; }
-.heading .button1 {
+.heading .button1, #formulaire-contact .button1 {
   margin-left: 80px;
   border: 2px solid #20618d;
   padding: 8px 15px; }
-  .heading .button1:hover {
+  .heading .button1:hover, #formulaire-contact .button1:hover {
     opacity: 0.8; }
-.heading .button2 {
+.heading .button2, #formulaire-contact .button2 {
   margin-left: 30px;
   background: #20618d;
   color: white;
   padding: 8px 15px;
   border: 2px solid #20618d; }
-  .heading .button2:hover {
+  .heading .button2:hover, #formulaire-contact .button2:hover {
     background: #0067ad; }
 
 /************************************************
@@ -207,9 +207,16 @@ footer .fleche {
   flex-direction: column;
   align-items: center;
   margin: auto; }
+  footer .fleche a {
+    text-decoration: none; }
   footer .fleche i {
+    margin-top: 20px;
+    text-align: center;
+    display: block;
     color: var(--color-text);
     font-size: 20px; }
+  footer .fleche p {
+    color: var(--color-text); }
 
 /************************************************
 8.	PAGE : HOME
@@ -605,5 +612,69 @@ footer .fleche {
     margin-bottom: 10px; }
   .trois-contacts i {
     font-size: 30px; }
+  .trois-contacts .question a {
+    color: var(--color-text);
+    text-decoration: none; }
+
+/************************************************
+13.	FORMULAIRE
+************************************************/
+#formulaire-contact {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  font-family: "Questrial", sans-serif;
+  min-height: 100vh;
+  background: var(--darkgrey); }
+
+.container {
+  margin: auto;
+  margin-bottom: 100px; }
+
+.line-separation {
+  margin-bottom: 80px;
+  width: 200px; }
+
+.contact-heading {
+  text-align: center; }
+  .contact-heading h2 {
+    margin-top: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center; }
+
+#contact-form {
+  color: var(--color-text);
+  font-size: 20px;
+  background-color: var(--color-page-background);
+  padding: 40px;
+  border-radius: 5px; }
+
+/************************************************
+3.	ELEMENTS DU FORMULAIRE
+************************************************/
+.blue {
+  color: #20618d; }
+
+.form-control {
+  height: 50px;
+  font-size: 18px; }
+
+.comments {
+  color: #b91f1f;
+  font-style: italic;
+  font-size: 18px;
+  height: 25px;
+  /*permet de lui donner une place fixe, même si msg d'erreur non affiché*/ }
+
+#contact-form .button2 {
+  margin-top: 40px;
+  outline: none; }
+
+.thank-you {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 22px; }
 
 /*# sourceMappingURL=style.css.map */
